@@ -24,7 +24,8 @@ module GetLinks
   end
 
   def plist_to_json
-    `plutil -convert json \'#{PLIST}\' -o #{JSN}`
+    `plutil -convert json #{PLIST} -o #{JSN}`
+    
     @json = JSON.parse(File.read(JSN))
     @json_file = JSON.pretty_generate(@json[PKG])
   end
@@ -60,7 +61,7 @@ module GetLinks
     `cd #{File.join(DWN_LNK)} ; open .`
     sleep 1
     `open -a TextEdit #{REPORT}`
-    `killall Terminal`
+    # `killall Terminal`
   end
 end
 
