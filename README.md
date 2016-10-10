@@ -31,7 +31,7 @@ Simply open the terminal and paste the command below.
 To install all the downloaded packages use the following command:
 
 ```sh
- sudo ./download_install.sh ../download_links/links.txt ../LogicX
+ sudo ./download_install.sh $(pwd)/download_links/links.txt
 ```
 
 ### Development
